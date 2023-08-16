@@ -1,4 +1,4 @@
-<div *ngFor="let question of questions; index as i">
+<div *ngFor="let question of questions; index as i" class="mb-1">
   <div [innerHTML]="question.question"></div>
   <app-option-selector
     [options]="question.options"

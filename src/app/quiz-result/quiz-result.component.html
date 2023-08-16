@@ -1,9 +1,9 @@
 <div class="container">
   <div class="page-title">RESULTS</div>
   <app-quiz [questions]="questions" [isResult]="true"></app-quiz>
-  <div class="result">
+  <div class="text-center">
     <span
-      class="result"
+      class="p-1"
       [ngClass]="{
         red: correctAnswers <= 1,
         yellow: correctAnswers >= 2 && correctAnswers <= 3,
@@ -13,5 +13,9 @@
       You scored {{ correctAnswers }} out of {{ questions.length }}</span
     >
   </div>
-  <button [routerLink]="'quiz-maker'" class="end-btn">Create a new quiz</button>
+  <div class="text-center">
+    <button [routerLink]="'quiz-maker'" class="end-btn">
+      Create a new quiz
+    </button>
+  </div>
 </div>

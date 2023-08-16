@@ -1,6 +1,3 @@
-.category-form {
-  margin-bottom: 20px;
-  > * {
-    margin-right: 10px;
-  }
+.category-form > * {
+  margin-right: 10px;
 }
