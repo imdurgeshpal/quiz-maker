@@ -1,0 +1,9 @@
+<div *ngFor="let question of questions; index as i">
+  <div [innerHTML]="question.question"></div>
+  <app-option-selector
+    [options]="question.options"
+    [formControl]="getFormArrayControl(i)"
+    [isResult]="isResult"
+    [correctAnswer]="question.correct_answer"
+  ></app-option-selector>
+</div>

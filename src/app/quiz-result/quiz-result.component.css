@@ -1,0 +1,18 @@
+.red {
+  background-color: red;
+  color: black;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.result {
+  padding: 10px;
+}

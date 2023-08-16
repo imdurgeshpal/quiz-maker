@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+  text-align: center;
+  .page-title {
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .end-btn {
+    padding: 10px;
+    margin-top: 10px;
+  }
+}

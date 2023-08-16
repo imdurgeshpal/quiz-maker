@@ -1,0 +1,15 @@
+<button
+  class="option"
+  *ngFor="let option of options"
+  [ngClass]="{
+    selected: !isResult && option === value,
+    wrong: isResult && option === value && correctAnswer !== option,
+    correct:
+      isResult &&
+      ((correctAnswer === value && option === value) ||
+        correctAnswer === option)
+  }"
+  (click)="!isResult && selectOption(option)"
+>
+  <span [innerHTML]="option"></span>
+</button>
