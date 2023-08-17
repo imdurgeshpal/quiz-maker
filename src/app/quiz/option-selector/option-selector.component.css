@@ -12,7 +12,13 @@
 .option {
   margin: 10px 10px 10px 0px;
   padding: 5px 20px;
-  text-decoration: none;
-  border: none;
   cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.hover:hover {
+  transition: background 300ms ease-in-out;
+  background-color: #249924;
+  color: white;
 }

@@ -1,13 +1,15 @@
 <div class="container">
   <div class="page-title text-center mb-2">QUIZ MAKER</div>
   <div [formGroup]="categoryForm" class="category-form text-center mb-2">
-    <select formControlName="category" id="categorySelect">
+    <select formControlName="category" id="categorySelect" class="select-category">
+      <option value="" disabled>Select a category</option>
       <option [value]="category.id" *ngFor="let category of categories">
         {{ category.name }}
       </option>
     </select>
 
     <select formControlName="difficulty" id="difficultySelect">
+      <option value="" disabled>Select difficulty</option>
       <option
         [value]="difficulty.value"
         *ngFor="let difficulty of difficulties"
@@ -18,8 +20,9 @@
 
     <button
       id="createBtn"
-      [disabled]="categoryForm.invalid"
+      [disabled]="categoryForm.pristine || categoryForm.invalid"
       (click)="createQuiz()"
+      class="cursor-pointer"
     >
       Create
     </button>
@@ -35,7 +38,7 @@
       <button
         (click)="submit()"
         class="end-btn"
-        [disabled]="questionFormArray.invalid"
+        *ngIf="questionFormArray.valid"
       >
         Submit
       </button>

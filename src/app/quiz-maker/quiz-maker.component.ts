@@ -34,6 +34,7 @@ export class QuizMakerComponent implements OnInit {
   }
 
   createQuiz(): void {
+    this.categoryForm.markAsPristine();
     const { category, difficulty } = this.categoryForm.value;
     this.quizService.getQuestions(category, difficulty).subscribe({
       next: (res) => (this.questions = res),

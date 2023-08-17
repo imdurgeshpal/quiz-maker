@@ -1,6 +1,11 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { Question } from '../models';
-import { FormBuilder, Validators, FormControl } from '@angular/forms';
+import {
+  FormBuilder,
+  Validators,
+  FormControl,
+  FormArray,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-quiz',
@@ -23,6 +28,7 @@ export class QuizComponent implements OnChanges {
   }
 
   private initForm() {
+    this.formArray.clear();
     this.questions.forEach((q) => {
       this.formArray.push(
         this.fb.control(q.selectedAnswer, Validators.required)

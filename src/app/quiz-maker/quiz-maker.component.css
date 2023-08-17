@@ -1,3 +1,7 @@
 .category-form > * {
   margin-right: 10px;
 }
+
+.select-category {
+  width: 300px;
+}
